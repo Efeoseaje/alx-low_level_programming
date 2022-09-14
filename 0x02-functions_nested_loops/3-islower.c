@@ -2,17 +2,17 @@
 
 /**
  * _islower- test whether c is a lower case character
- * @c: integer input
+ * @x: integer input
  * Description- code test whether the letter c is lower case
  *
  * Return: 0 or 1
  */
 
-int _islower(int c)
+int _islower(int x)
 {
-	int c;
+	int x;
 
-	if (c >= 'a' && c <= 'z')
+	if (x >= 'a' && x <= 'z')
 	{
 	return (1);
 	}
