@@ -16,17 +16,17 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	/* allocate memory for the new hash table */
 	table = malloc(sizeof(hash_table_t));
-	
+
 	if (table == NULL)
-		return NULL;
+		return (NULL);
 	/* allocate memory to buckets */
 	table->size = size;
-	table->array = calloc(table->size, sizeof(hash_table_t*));
+	table->array = calloc(table->size, sizeof(hash_node_t *));
 
 	if (table->array == NULL)
-		return NULL;
+		return (NULL);
 	/* initialize all buckets to NULL */
-	for(i = 0; i < table->size; i++)
+	for (i = 0; i < table->size; i++)
 		table->array[i] = NULL;
-	return table;
+	return (table);
 }
